@@ -9,18 +9,24 @@
     <main>
       <section class="text-submission">
         <h2 tabindex="0">Word <span>Watch</span> 👀</h2>
-        <textarea placeholder="Paste text here"></textarea>
-        <button>Break down</button>
+        <textarea id="myTextarea" placeholder="Paste text here"></textarea>
+        <button type="button" onclick="myFunction()">Break Down</button>
       </section>
 
       <section class="word-data" tabindex="0">
         <article class="top-word">
           <h3>Top word from Word Watch API: </h3>
         </article>
-        <article class="word-count" tabindex="0">
+        <article cla ss="word-count" tabindex="0">
+          <p id="demo"></p>
         </article>
       </section>
     </main>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTextarea").value;
+        document.getElementById("demo").innerHTML = x;
+      }
+    </script>
   </body>
 </html>
-
